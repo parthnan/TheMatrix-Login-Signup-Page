@@ -2,7 +2,11 @@
 Project in HTML-CSS-Javascript to design a login, signup webpage. The chosen theme is full on Retro based on The Matrix Movie series!! Made way back in 2014. 
 
 # Login Page
-A still of the login page is as below. It links to the facebook pages of the coding club at university. Used some funky Javascript to create the Matrix-esque Green waterfall of symbols in the background!
+A still of the login page is as below. It links to the facebook pages of the coding club at university. 
+
+Used some funky Javascript to create the Matrix-esque Green waterfall of symbols in the background! 
+
+The buttons model the keyboard buttons of Vintage PC's , the shadowing changes upon hovering!
 
 ![alt text](https://raw.githubusercontent.com/parthnan/TheMatrix-Login-Signup-Page/master/matrix-login.png)
 
