@@ -1,0 +1,253 @@
+<html>
+<head>
+  <canvas id="q"></canvas>
+<script>
+var s = window.screen;
+var width = q.width = 1.5*s.width;
+var height = q.height = s.height;
+var letters = Array(256).join(1).split('');
+
+var draw = function () {
+  q.getContext('2d').fillStyle='rgba(0,0,0,0.05)';
+  q.getContext('2d').fillRect(0,0,width,height);
+  q.getContext('2d').fillStyle='#0F0';
+  letters.map(function(y_pos, index){
+    text = String.fromCharCode(100+Math.random()*33);
+    x_pos = index * 10;
+    q.getContext('2d').fillText(text, x_pos, y_pos);
+    letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
+  });
+};
+setInterval(draw, 28);
+</script>
+<style>
+canvas{
+  opacity:0.7;
+  z-index:-1;
+position: fixed ;
+width:100%auto;
+height:100%auto;
+margin: 0 0 0 -680px;
+}
+body{
+  position:relative;
+	vertical-align: center;
+	background-image:url("key.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+form{
+    font-family: Arial;
+}
+p.coding{
+    font-family:"Lucida Console";
+    font-size: 30px;
+}
+.coding2{
+
+    font-family:"Arial";
+    font-size: 25px;
+    }
+    .coding3{
+
+    font-family:"Arial";
+    font-size: 15px;
+    }
+.coding span{
+    transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    font-family:"Lucida Console";
+    font-size: 30px;
+    background-color:red;
+    border-top-color: #220000;
+     border-bottom-color: #dd0000;
+      border-left-color: #770000;
+       border-right-color: #770000;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 8px;
+    border-top-width: 2px;
+}
+span:hover{
+    transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    background-color:#dd0000;
+    border-bottom-color: #550000;
+     border-top-color: #ff0000;
+      border-left-color: #770000;
+       border-right-color: #770000;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 8px;
+    border-top-width: 2px;
+}
+input[type=text]:hover{
+  transition: background-color 0.4s;
+	 background-color:#6666ff;
+     opacity: 0.6;
+}
+#fb {
+  transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    width: 45px;
+    height: 45px;
+    background-color: blue;
+    border-top-color: #040422;
+     border-bottom-color: #1b1bdd;
+      border-left-color: #0e0e77;
+       border-right-color: #0e0e77;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 8px;
+    border-top-width: 2px;
+}
+#fb:hover {
+   transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    background-color: #1010cc;
+    border-bottom-color: #080844;
+     border-top-color: #2020ff;
+      border-left-color: #0e0e77;
+       border-right-color: #0e0e77;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 8px;
+    border-top-width: 2px;
+}
+#fp {
+  transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    width: 45px;
+    height: 45px;
+    background-color: #111111;
+    border-top-color: #000000;
+     border-bottom-color: #333333;
+      border-left-color: #222222;
+       border-right-color: #222222;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 8px;
+    border-top-width: 2px;
+}
+#fp:hover {
+  transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    background-color: #0d0d0d;
+    border-top-color: #333333;
+     border-bottom-color: #040404;
+      border-left-color: #222222;
+       border-right-color: #222222;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 8px;
+    border-top-width: 2px;
+}
+#fp:hover {
+    
+}
+input[type=text]{
+  
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 0px 8px;
+    color: #fff;
+    font-family: "arial";
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 10px;
+}
+input[type=submit]{
+  transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    width: 260px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px;
+    margin-top: 10px;
+    background-color: white;
+    border-top-color: #222222;
+     border-bottom-color: #dddddd;
+      border-left-color: #777777;
+       border-right-color: #777777;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 6px;
+    border-top-width: 2px;
+}
+input[type=submit]:hover{
+
+    background-color: #dddddd;
+   transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    border-bottom-color: #555555;
+     border-top-color: #ffffff;
+      border-left-color: #777777;
+       border-right-color: #777777;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 6px;
+    border-top-width: 2px;
+}
+
+input[type=submit]:active{
+    
+}
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+a[href="signup.html"] {
+    background-color: #ff7000;
+    text-decoration: none;
+    transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    border-bottom-color: #dd6200;
+     border-top-color: #441c00;
+      border-left-color: #883800;
+       border-right-color: #883800;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 7px;
+    border-top-width: 2px;
+}
+a[href="signup.html"]:hover{
+  background-color: #d75e00;
+    transition: border-bottom-color 0.4s,border-top-color 0.4s, border-left-color 0.4s,border-right-color 0.4s,background-color 0.4s;
+    border-bottom-color: #441c00;
+     border-top-color: #ff7000;
+      border-left-color: #883800;
+       border-right-color: #883800;
+    border-style: solid;
+    border-width: 5px;
+    border-bottom-width: 7px;
+    border-top-width: 2px;
+}
+</style>
+</head>
+<body>
+  <br><br><br>
+<p class="coding"><span><01>!n9</span>Club
+</p>
+<p class="coding2">Login</p>
+<form action="back.php" method="post">
+<input class="cod" type="text" name="name" placeholder="E-mail"><br>
+<input class="cod" type="text" name="email" placeholder="Password"><br>
+<input class="coding" type="submit" value="Login">
+</form>
+<br>
+<a href="signup.html" class="coding2">Or Sign Up</a><br><br><br>
+<a class="f"><img id="fp" src="forgot.png"></a><br><br>
+<a class="f" href="https://www.facebook.com/codingclubpilani"><img id="fb" src="fb.png"></a>
+</body>
+</html>
