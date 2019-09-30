@@ -1,5 +1,5 @@
 # TheMatrix-Login-Signup-Page
-Project in HTML-CSS-Javascript to design a login, signup webpage. The chosen theme is full on Retro based on The Matrix Movie series!! Made way back in 2014. 
+Project in HTML-CSS-Javascript to design a login, signup webpage. The chosen theme is full on Retro based on The Matrix Movie series!! Made way back in 2014. Design is safe against zooming/various browser display settings.
 
 # Login Page
 A still of the login page is as below. It links to the facebook pages of the coding club at university. 
